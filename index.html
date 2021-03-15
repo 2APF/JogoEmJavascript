@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+	<title></title>
+</head>
+<body>
+
+  <script type="text/javascript">
+    
+
+    // document.write e um echo "" do javascript.
+    // A variavel PaulaLinha, recebe a função de quebra de linha.
+    var pulaLinha = function() {
+    document.write("<br>");
+    };
+
+    // Variavel "mostra" vai receber e executar.
+    var mostra = function(frase) {
+    document.write(frase);
+    pulaLinha();
+    };
+
+  
+    // Prompt - As perguntas (label)
+    // ParseInt - input do tipo inteiro
+    var nome = prompt("Qual é o seu nome?");
+    var nomeS = parseInt(nome);
+    var ano = prompt("Quantos anos tens?");
+    var anoIn = parseInt(ano);
+
+    // Condição que checa a idade do usuário e, de acordo a idade, recorre ao feedback
+    if (anoIn >= 99){
+      mostra("Desculpe, o senhor é mesmo on? Sei lá, a idade é demasiada");
+    } else if(anoIn < 16){
+
+        var raiz = prompt("Quanto é a raiz quadrada de 1000?");
+        var raizCe = parseInt(raiz);
+        if(raizCe <= 100) {
+          mostra("Parabéns, "+ nome + " és um(a) excelente pensador(a)!");
+        } else{
+          mostra("Errou! "+ nome + ", pela próxima consegues...");
+        }
+    } else {
+
+      // Minhas variaveis
+      var numeroPensado = Math.round(Math.random() * 100);
+      var chute = prompt("Pensei em um número! Qual é o número que você acha que é? Pista: " + (numeroPensado*2+2));
+
+      if(chute == numeroPensado) {
+        // mostra("Uau! Senhor(a) " + nome + ", você acertou, pois eu pensei no " + numeroPensado);
+
+           // Minhas variaveis
+          var numeroPensadoDo = Math.round(Math.random() * 100);
+          var chuteDo = prompt("Pensei em um número! Qual é o número que você acha que é? Pista: " + (numeroPensadoDo*2+2));
+
+          if(chuteDo == numeroPensadoDo) {
+             
+              var numeroPensadoTr = Math.round(Math.random() * 100);
+              var chuteTr = prompt("Pensei em um número! Qual é o número que você acha que é? Pista: " + (numeroPensadoTr*2+2));
+
+              if(chuteTr == numeroPensadoTr) {
+          
+                var numeroPensadoQu = Math.round(Math.random() * 100);
+                var chuteQu = prompt("MÁQUINA! Vamos, pensei em um número! Qual é o número que você acha que é? Pista: " + (numeroPensadoQu*10+10));
+
+                if(chuteQu == numeroPensadoQu) {
+
+                  var numeroPensadoCi = Math.round(Math.random() * 100);
+                  var chuteCi = prompt("MÁQUINA! Vamos, pensei em um número! Qual é o número que você acha que é? Pista: " + (numeroPensadoCi*10+10));
+
+                  if(chuteCi == numeroPensadoCi) {
+
+                      var ceo = "2APF"
+                      var ceoD = prompt("MÁQUINA! Valendo a taça, quem desenvolveu este jogo? Pista: Spacial One");
+
+                      if(ceoD == ceo) {
+                         mostra("Uau! Senhor(a) você é uma MÁQUINA, acertaste todas as questões, que são: " + numeroPensado +", "+ numeroPensadoDo+", "+numeroPensadoTr+", "+numeroPensadoQu+", "+numeroPensadoCi+" e "+ceoD+"... REI "+nome+"!");
+                      } else {
+                         mostra("Você errou! Quem desenvolveu este jogo foi " + ceo+" mas, você acertou o primeiro, sengundo, terceiro e o quarto e quinto.");
+                      }
+                  } else {
+                       mostra("Você errou! Eu tinha pensado no " + numeroPensadoQu+" mas, você acertou o primeiro, sengundo, terceiro e o quarto.");
+                  }
+
+
+                } else {
+                   mostra("Você errou! Eu tinha pensado no " + numeroPensadoQu+" mas, você acertou o primeiro, sengundo e terceiro.");
+                }
+
+              } else {
+                 mostra("Você errou! Eu tinha pensado no " + numeroPensadoTr+" mas, você acertou o primeiro e sengundo.");
+              }
+          } else {
+             mostra("Você errou! Eu tinha pensado no número " + numeroPensadoDo +" mas, você acertou o primeiro.");
+          }
+
+      } else {
+         mostra("Você errou! Eu tinha pensado no número " + numeroPensado);
+      }
+
+    }
+
+
+  </script>
+
+
+</body>
+</html>
